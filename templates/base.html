@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Smart Leave Management{% endblock %}</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+
+        <a class="navbar-brand" href="{% url 'dashboard' %}">
+            Smart Leave
+        </a>
+
+        <div class="ms-auto">
+
+            <a href="{% url 'dashboard' %}" class="btn btn-outline-light btn-sm">
+                Dashboard
+            </a>
+
+            <a href="{% url 'apply_leave' %}" class="btn btn-outline-light btn-sm">
+                Apply Leave
+            </a>
+
+            <a href="{% url 'my_leave' %}" class="btn btn-outline-light btn-sm">
+                My Leave
+            </a>
+
+            <a href="{% url 'profile' %}" class="btn btn-outline-light btn-sm">
+                Profile
+            </a>
+
+            <a href="{% url 'logout' %}" class="btn btn-danger btn-sm">
+                Logout
+            </a>
+
+        </div>
+
+    </div>
+</nav>
+
+<div class="container mt-4">
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+
+</body>
+</html>
