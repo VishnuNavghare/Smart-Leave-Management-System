@@ -172,12 +172,20 @@ http://127.0.0.1:8000/admin/
 
 ## 📸 Screenshots
 
-- Employee Login
-- Dashboard
-- Apply Leave
-- Leave History
-- Edit Profile
-- Admin Panel
+- 01_Employee_Login_Page.png
+- 02_Employee_Dashboard.png
+- 03_Apply_Leave_Form.png
+- 04_My_Leave_History.png
+- 05_Admin_Login.png
+- 06_Admin_Dashboard.png
+- 07_Employee_List.png
+- 08_Leave_Requests_List.png
+- 09_Approved_Leave.png
+- 10_Pending_Leave.png
+- 11_Rejected_Leave.png
+- 12_Add_Employee_Page.png
+- 13_MySQL_Database.png
+- 14_GitHub_Repository.png
 
 ---
 
