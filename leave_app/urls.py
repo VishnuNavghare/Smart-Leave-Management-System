@@ -1,5 +1,12 @@
 from django.urls import path
 from . import views
+from rest_framework.routers import DefaultRouter
+from .views import EmployeeViewSet, LeaveViewSet
+
+
+router = DefaultRouter()
+router.register(r'employees', EmployeeViewSet)
+router.register(r'leaves', LeaveViewSet)
 
 urlpatterns = [
 
@@ -23,3 +30,5 @@ urlpatterns = [
     path("edit_profile/", views.edit_profile, name="edit_profile"),
 
 ]
+
+urlpatterns += router.urls

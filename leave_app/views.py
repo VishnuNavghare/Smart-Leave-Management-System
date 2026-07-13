@@ -1,6 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Employee, Leave
 from .forms import LeaveForm
+from rest_framework import viewsets
+from .serializers import EmployeeSerializer, LeaveSerializer
+from .models import Employee, Leave
+from rest_framework import filters
+from django_filters.rest_framework import DjangoFilterBackend
 
 
 def home(request):
@@ -175,3 +180,56 @@ def edit_profile(request):
 def logout_page(request):
     request.session.flush()
     return redirect("login")
+
+class EmployeeViewSet(viewsets.ModelViewSet):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
+
+
+class LeaveViewSet(viewsets.ModelViewSet):
+    queryset = Leave.objects.all()
+    serializer_class = LeaveSerializer
+    
+    
+class EmployeeViewSet(viewsets.ModelViewSet):
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
+
+    filter_backends = [
+        DjangoFilterBackend,
+        filters.SearchFilter,
+        filters.OrderingFilter
+    ]
+
+    search_fields = [
+        'first_name',
+        'last_name',
+        'username',
+        'email'
+    ]
+
+    ordering_fields = ['id', 'first_name']
+
+class LeaveViewSet(viewsets.ModelViewSet):
+    queryset = Leave.objects.all()
+    serializer_class = LeaveSerializer
+
+    filter_backends = [
+        DjangoFilterBackend,
+        filters.SearchFilter,
+        filters.OrderingFilter
+    ]
+
+    filterset_fields = [
+        'status',
+        'leave_type'
+    ]
+
+    search_fields = [
+        'reason'
+    ]
+
+    ordering_fields = [
+        'start_date',
+        'end_date'
+    ]
