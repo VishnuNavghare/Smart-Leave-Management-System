@@ -85,7 +85,7 @@ Smart Leave Management System/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/Smart-Leave-Management-System.git
+git clone https://github.com/VishnuNavghare/Smart-Leave-Management-System.git
 ```
 
 ### Move to Project Folder
