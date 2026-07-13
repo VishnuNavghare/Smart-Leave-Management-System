@@ -44,36 +44,31 @@ A web-based Leave Management System developed using **Python, Django, and MySQL*
 Smart Leave Management System/
 │
 ├── config/
-│   ├── __init__.py
 │   ├── settings.py
 │   ├── urls.py
 │   ├── asgi.py
-│   └── wsgi.py
+│   ├── wsgi.py
+│   └── __init__.py
 │
 ├── leave_app/
 │   ├── migrations/
 │   ├── admin.py
-│   ├── apps.py
 │   ├── forms.py
 │   ├── models.py
 │   ├── serializers.py
 │   ├── urls.py
 │   ├── views.py
-│   └── __init__.py
+│   └── ...
 │
 ├── templates/
 │   ├── base.html
+│   ├── home.html
 │   ├── login.html
 │   ├── dashboard.html
 │   ├── apply_leave.html
 │   ├── leave_history.html
-│   ├── edit_profile.html
+│   ├── profile.html
 │   └── ...
-│
-├── static/
-│   ├── css/
-│   ├── js/
-│   └── images/
 │
 ├── Screenshots/
 │
