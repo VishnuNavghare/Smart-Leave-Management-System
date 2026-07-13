@@ -1,113 +1,218 @@
 # Smart Leave Management System
 
-## Overview
+A web-based Leave Management System developed using **Python, Django, and MySQL**. This application helps organizations manage employee leave requests efficiently. Employees can apply for leave, track leave status, and update their profiles, while administrators can manage employees and approve or reject leave requests.
 
-Smart Leave Management System is a web-based application developed using **Python, Django, and MySQL**. It enables employees to apply for leave online and allows administrators to efficiently manage employee records and leave requests.
+---
 
-## Features
+## 🚀 Features
 
-* Employee Login
-* Employee Dashboard
-* Apply for Leave
-* View Leave Status
-* Admin Login
-* Add, Edit, and Delete Employees
-* Approve or Reject Leave Requests
-* Session-Based Authentication
-* MySQL Database Integration
-* Responsive User Interface
+### Employee Module
+- Employee Login
+- Employee Dashboard
+- Apply for Leave
+- View Leave History
+- Edit Profile
+- Session-based Authentication
 
-## Technologies Used
+### Admin Module
+- Admin Login (Django Admin Panel)
+- Add Employee
+- Edit Employee
+- Delete Employee
+- View All Leave Requests
+- Approve Leave
+- Reject Leave
 
-* Python
-* Django
-* MySQL
-* HTML5
-* CSS3
-* Bootstrap
-* JavaScript
+---
 
-## Project Structure
+## 🛠 Technologies Used
+
+- Python 3.x
+- Django
+- MySQL
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript
+- Django ORM
+
+---
+
+## 📂 Project Structure
 
 ```text
-Smart-Leave-Management-System/
-│── leave_management/
-│── templates/
-│── static/
-│── manage.py
-│── requirements.txt
-│── README.md
+Smart Leave Management System/
+│
+├── config/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── leave_app/
+│   ├── migrations/
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   ├── views.py
+│   └── __init__.py
+│
+├── templates/
+│   ├── base.html
+│   ├── login.html
+│   ├── dashboard.html
+│   ├── apply_leave.html
+│   ├── leave_history.html
+│   ├── edit_profile.html
+│   └── ...
+│
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── Screenshots/
+│
+├── manage.py
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
-## Installation
+---
 
-### 1. Clone the Repository
+## ⚙ Installation
+
+### Clone the Repository
 
 ```bash
-git clone https://github.com/VishnuNavghare/Smart-Leave-Management-System.git
+git clone https://github.com/yourusername/Smart-Leave-Management-System.git
 ```
 
-### 2. Move to the Project Directory
+### Move to Project Folder
 
 ```bash
 cd Smart-Leave-Management-System
 ```
 
-### 3. Create and Activate a Virtual Environment
-
-Windows:
+### Create Virtual Environment
 
 ```bash
 python -m venv venv
+```
+
+### Activate Virtual Environment
+
+Windows
+
+```bash
 venv\Scripts\activate
 ```
 
-### 4. Install Dependencies
+Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Configure MySQL
+### Configure MySQL Database
 
-Update the database settings in `settings.py` with your MySQL credentials.
+Update your **settings.py** database configuration.
 
-### 6. Apply Migrations
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'leave_management',
+        'USER': 'root',
+        'PASSWORD': 'your_password',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+```
+
+### Apply Migrations
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 7. Create Superuser (Optional)
+### Create Superuser
 
 ```bash
 python manage.py createsuperuser
 ```
 
-### 8. Run the Development Server
+### Run Server
 
 ```bash
 python manage.py runserver
 ```
 
-Open your browser and visit:
+Open:
 
 ```
 http://127.0.0.1:8000/
 ```
 
-## Future Improvements
+Admin Panel:
 
-* Email Notifications
-* Leave Balance Management
-* Reports and Analytics
-* Password Reset
-* Employee Profile Management
+```
+http://127.0.0.1:8000/admin/
+```
 
-## Author
+---
 
-**Vishnu Navghare**
+## 📸 Screenshots
 
-* GitHub: https://github.com/VishnuNavghare
-* Technology: Python | Django | MySQL
+- Employee Login
+- Dashboard
+- Apply Leave
+- Leave History
+- Edit Profile
+- Admin Panel
+
+---
+
+## 📦 API Endpoints
+
+```
+/api/employees/
+/api/leaves/
+```
+
+---
+
+## 📁 Requirements
+
+Install all dependencies using:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 👨‍💻 Developed By
+
+**Vishnu K. Navghare**
+
+Python Full Stack Developer
+
+---
+
+## 📜 License
+
+This project is developed for educational and placement purposes.
