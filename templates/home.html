@@ -1,15 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Leave Management System</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background: linear-gradient(135deg,#0d6efd,#6f42c1);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .card{
+            border:none;
+            border-radius:20px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+            padding:30px;
+        }
+
+        h1{
+            font-weight:bold;
+        }
+
+        p{
+            color:gray;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Smart Leave Management System</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
 
-    <a href="/login/">
-        <button>Employee Login</button>
-    </a>
+            <div class="card text-center">
+
+                <h1 class="mb-3">Smart Leave Management System</h1>
+
+                <p class="mb-4">
+                    Manage employee leave requests quickly and efficiently.
+                </p>
+
+                <a href="{% url 'login' %}" class="btn btn-primary btn-lg">
+                    Employee Login
+                </a>
+
+                <hr>
+
+                <small class="text-muted">
+                    © 2026 Smart Leave Management System
+                </small>
+
+            </div>
+
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

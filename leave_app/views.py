@@ -7,7 +7,6 @@ def home(request):
     return render(request, "home.html")
 
 
-# ---------------- Register ---------------- #
 
 def register(request):
     if request.method == "POST":
@@ -25,7 +24,6 @@ def register(request):
     return render(request, "register.html")
 
 
-# ---------------- Login ---------------- #
 
 def login_page(request):
 
@@ -53,7 +51,6 @@ def login_page(request):
     return render(request, "login.html")
 
 
-# ---------------- Dashboard ---------------- #
 
 def dashboard(request):
 
@@ -78,7 +75,6 @@ def dashboard(request):
     return render(request, "dashboard.html", context)
 
 
-# ---------------- Apply Leave ---------------- #
 
 def apply_leave(request):
 
@@ -107,8 +103,6 @@ def apply_leave(request):
         "form": form
     })
 
-
-# ---------------- My Leave ---------------- #
 
 def my_leave(request):
 
@@ -139,8 +133,6 @@ def my_leave(request):
     })
 
 
-# ---------------- Profile ---------------- #
-
 def profile(request):
 
     employee_id = request.session.get("employee_id")
@@ -154,8 +146,6 @@ def profile(request):
         "employee": employee
     })
 
-
-# ---------------- Edit Profile ---------------- #
 
 def edit_profile(request):
 
@@ -181,8 +171,6 @@ def edit_profile(request):
         "employee": employee
     })
 
-
-# ---------------- Logout ---------------- #
 
 def logout_page(request):
     request.session.flush()
