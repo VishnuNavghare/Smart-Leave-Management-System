@@ -130,7 +130,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'leave_management',
         'USER': 'root',
-        'PASSWORD': 'your_password',
+        'PASSWORD': 'Vishnu@2001',
         'HOST': 'localhost',
         'PORT': '3306',
     }
