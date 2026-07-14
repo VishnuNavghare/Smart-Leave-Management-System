@@ -181,10 +181,6 @@ def logout_page(request):
     request.session.flush()
     return redirect("login")
 
-class EmployeeViewSet(viewsets.ModelViewSet):
-    queryset = Employee.objects.all()
-    serializer_class = EmployeeSerializer
-
 
 class LeaveViewSet(viewsets.ModelViewSet):
     queryset = Leave.objects.all()
